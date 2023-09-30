@@ -165,6 +165,7 @@ const MyForm = (props: any) => {
                                             }
                                         }}
                                         fullWidth
+                                        disabled={id}
                                         id="email"
                                         name="email"
                                         value={formik.values.email}
