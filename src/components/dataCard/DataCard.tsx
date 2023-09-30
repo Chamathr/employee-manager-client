@@ -36,7 +36,7 @@ const DataCard = (props: any) => {
                 <CardMedia
                     component="img"
                     height="140"
-                    image={employeeData?.photo || "https://media.istockphoto.com/id/1391462403/photo/kicking-horse-river-carves-through-natural-bridge-at-yoho-national-park-british-columbia.webp?b=1&s=612x612&w=0&k=20&c=tk82CSl3zcYRNDriGcydhJRvWytHN1_qNjEmE1uTv9c="}
+                    image={employeeData?.photo}
                     alt="green iguana"
                 />
                 <div className={dataCardStyles.root}>

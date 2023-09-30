@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import DataGrid from "../../../components/dataGrid/DataGrid";
-import SearchBox from "../../../components/searchBox/searchBox";
+import SearchBox from "../../../components/searchBox/SearchBox";
 
 const Table = () => {
 
