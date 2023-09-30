@@ -240,7 +240,7 @@ const MyForm = (props: any) => {
                                 </div>
                             </div>
 
-                            <Button type="submit" variant="outlined" color="primary" className={formStyles.submitButton}>
+                            <Button type="submit" variant="outlined" color="primary" sx={{ width: '120px', color: 'rgb(97, 18, 171)', borderColor: 'rgb(97, 18, 171)', float: 'right' }}>
                                 {id ? "UPDATE" : "ADD"}
                             </Button>
                         </form>
