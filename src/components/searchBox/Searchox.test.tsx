@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import SearchBox from './SearchBox';
+import SearchBox from './Searchbox';
 
 describe('SearchBox Component', () => {
   test('calls onSearch when search button is clicked', () => {
