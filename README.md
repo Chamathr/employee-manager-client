@@ -15,7 +15,7 @@
     
     c. To run the app with Docker ->
         i. Build the Docker image -> docker build -t <image-name>:<tag-name> .
-        ii. Run the Docker image -> docker run -p 3000:3000 -d <image-name>:<tag-name>
+        ii. Run the Docker image -> docker run -p 3000:3000 -d --name <container-name> <image-name>:<tag-name>
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

@@ -37,16 +37,16 @@ const Table = () => {
 
     return (
         <>
-            <Card sx={{ paddingTop: '2rem', paddingLeft: '5rem', paddingRight: '5rem', height: '100vh'}}>
+            <Card sx={{ paddingTop: '2rem', paddingLeft: '5rem', paddingRight: '5rem', height: { sm: '500vh', md: '100vh' } }}>
                 <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center', marginBottom: '30px' }}>
-                    <div style={{marginRight: '10px', textAlign: 'end'}}>
+                    <div style={{ marginRight: '10px', textAlign: 'end' }}>
                         <SearchBox
                             value={search}
                             onChange={handleSearchChange}
                             onSearch={handleSearch}
                         />
                     </div>
-                    <Button variant="contained" style={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '20px' }} onClick={() => router.push('/employee/add')}>ADD EMPLOYEE</Button>
+                    <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '20px', zoom: { xs: 0.7, sm: 1 } }} onClick={() => router.push('/employee/add')}>ADD EMPLOYEE</Button>
                     {iconButton}
                 </div>
                 {view === 'list' ?
