@@ -20,13 +20,6 @@
   align-items: center;
 }
 
-.submitButton {
-  width: 120px;
-  color: rgb(97, 18, 171);
-  border-color: rgb(97, 18, 171);
-  float: right;
-}
-
 .label {
   font-size: 15px;
   color: #000000;
