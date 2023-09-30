@@ -1,0 +1,44 @@
+.root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.formCard {
+  height: 500px;
+  width: 50%;
+  padding: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.formRow {
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+}
+
+.submitButton {
+  width: 120px;
+  color: rgb(97, 18, 171);
+  border-color: rgb(97, 18, 171);
+  float: right;
+}
+
+.label {
+  font-size: 15px;
+  color: #000000;
+}
+
+/* CSS for widths below 768px */
+@media (max-width: 767px) {
+  .formCard {
+    height: 400px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+}

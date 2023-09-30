@@ -1,0 +1,12 @@
+
+.root {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonSection {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+  
