@@ -53,7 +53,7 @@ export function* addDetails(): Generator<any, void, unknown> {
       yield put(setAddEmployee(data?.data?.data));
     } catch (error: any) {
       yield put(setAddEmployeeLoading('idle'));
-      yield put(setAddEmployeeError(error.message));
+      yield put(setAddEmployeeError(error?.response?.data?.message));
     }
   });
 }
