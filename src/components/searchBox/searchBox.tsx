@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBox = ({ value, onChange, onSearch }: any) => {
     return (
+        
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'end' }}>
             <TextField
                 variant="outlined"
