@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBox = ({ value, onChange, onSearch }: any) => {
     return (
-        
+
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'end' }}>
             <TextField
                 variant="outlined"
@@ -24,7 +24,7 @@ const SearchBox = ({ value, onChange, onSearch }: any) => {
                     '& .MuiSvgIcon-root': {
                         color: 'red'
                     },
-                    width: '60%'
+                    width: '75%'
                 }}
             />
             <IconButton color="primary" onClick={onSearch}>

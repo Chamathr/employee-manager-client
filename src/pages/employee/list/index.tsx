@@ -46,8 +46,10 @@ const Table = () => {
                             onSearch={handleSearch}
                         />
                     </Box>
-                    <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '20px' }} onClick={() => router.push('/employee/add')}>ADD EMPLOYEE</Button>
-                    {iconButton}
+                    <Box sx={{ display: { xs: 'flex', md: 'unset' }, justifyContent: { xs: 'space-between', md: 'unset' }, marginTop: { xs: '15px', md: 'unset' } }}>
+                        <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '20px' }} onClick={() => router.push('/employee/add')}>ADD EMPLOYEE</Button>
+                        {iconButton}
+                    </Box>
                 </Box>
                 {view === 'list' ?
                     <DataTable />
