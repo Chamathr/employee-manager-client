@@ -31,7 +31,7 @@ const DataCard = (props: any) => {
     }, [deletedData])
 
     return (
-        <Card sx={{ maxWidth: 250 }}>
+        <Card sx={{ width: 250 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
