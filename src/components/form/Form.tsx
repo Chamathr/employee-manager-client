@@ -99,9 +99,9 @@ const MyForm = (props: any) => {
 
     return (
         <>
-            <Card sx={{ paddingTop: '2rem', paddingLeft: '5rem', paddingRight: '5rem', height: '100vh' }}>
+            <Card sx={{ paddingTop: '2rem', paddingLeft: { xs: '1rem', md: '5rem' }, paddingRight: { xs: '1rem', md: '1rem' }, height: '100vh' }}>
                 <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center', marginBottom: '10px' }}>
-                    <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '200px', zoom: { xs: 0.8, sm: 1 } }} onClick={() => router.push('/employee/list')}>List VIEW</Button>
+                    <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '200px' }} onClick={() => router.push('/employee/list')}>List VIEW</Button>
                 </div>
                 <div className={formStyles.root}>
                     <Card className={formStyles.formCard}>

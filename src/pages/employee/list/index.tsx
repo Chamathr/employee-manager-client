@@ -37,18 +37,18 @@ const Table = () => {
 
     return (
         <>
-            <Card sx={{ paddingTop: '2rem', paddingLeft: '5rem', paddingRight: '5rem', height: { sm: '500vh', md: '100vh' } }}>
-                <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'center', marginBottom: '30px' }}>
-                    <div style={{ marginRight: '10px', textAlign: 'end' }}>
+            <Card sx={{ paddingTop: '2rem', paddingLeft: { xs: '2.5rem', md: '5rem' }, paddingRight: { xs: '2.5rem', md: '5rem' }, height: { sm: '500vh', md: '100vh' } }}>
+                <Box sx={{ display: { md: 'flex' }, justifyContent: 'end', alignItems: 'center', marginBottom: '30px' }}>
+                    <Box sx={{ marginRight: { md: '10px' }, marginBottom: { xs: '15px', sm: 'unset' }, textAlign: 'end' }}>
                         <SearchBox
                             value={search}
                             onChange={handleSearchChange}
                             onSearch={handleSearch}
                         />
-                    </div>
-                    <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '20px', zoom: { xs: 0.7, sm: 1 } }} onClick={() => router.push('/employee/add')}>ADD EMPLOYEE</Button>
+                    </Box>
+                    <Button variant="contained" sx={{ background: "rgb(97, 18, 171)", borderRadius: '20px', marginRight: '20px' }} onClick={() => router.push('/employee/add')}>ADD EMPLOYEE</Button>
                     {iconButton}
-                </div>
+                </Box>
                 {view === 'list' ?
                     <DataTable />
                     :
