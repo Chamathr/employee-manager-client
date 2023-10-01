@@ -1,0 +1,14 @@
+
+.root {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.buttonSection {
+  display: flex;
+  align-items: center;
+}
+  
