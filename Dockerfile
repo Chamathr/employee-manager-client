@@ -1,6 +1,12 @@
 # Use the official Node.js image as base
 FROM node:18
 
+#Optimize the installation of Node.js packages 
+RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
+
+#Install globle dependancies
+RUN npm i -g typescript
+
 # Set the working directory
 WORKDIR /usr/src/app
 
