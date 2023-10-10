@@ -10,6 +10,8 @@ jest.mock('next/router', () => ({
     useRouter: jest.fn(),
 }));
 
+(useRouter as jest.Mock).mockReturnValue({ query: {} })
+
 const mockEmployeeData = {
     first_name: 'John',
     last_name: 'Doe',
@@ -20,7 +22,6 @@ const mockEmployeeData = {
 
 describe('DataCard Component', () => {
     test('renders the DataCard component', async () => {
-        (useRouter as jest.Mock).mockReturnValue({ query: {} })
         const { getByText } = render(
             <Provider store={store}>
                 <DataCard employeeData={mockEmployeeData} />
