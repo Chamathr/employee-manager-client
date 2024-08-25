@@ -38,13 +38,23 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
+            # Pull the Docker image
             docker pull chamathranaweera/employee-manager-client:prod
-
+            
             # Check if the container exists and stop and remove it if it does
-            if [ $(docker ps -aq -f name=employee-manager-client) ]; then
+            if [ "$(docker ps -aq -f name=employee-manager-client)" ]; then
+              echo "Stopping and removing existing container..."
               docker stop employee-manager-client
               docker rm employee-manager-client
             fi
 
-            # Run the new container
-            docker run -d --name employee-manager-client -p 80:3000 chamathranaweera/employee-manager-client:prod
+            # Run the new container with environment variables
+            echo "Starting new container..."
+            docker run -d --name employee-manager-client \
+              -p 80:3000 \
+              -e DATABASE_URL="${{ secrets.DATABASE_URL }}" \
+              -e BASE_URL="${{ secrets.BASE_URL }}" \
+              -e SERVER_PREFIX="${{ secrets.SERVER_PREFIX }}" \
+              -e PORT="${{ secrets.PORT }}" \
+              -e DUMMY_IMAGE="${{ secrets.DUMMY_IMAGE }}" \
+              chamathranaweera/employee-manager-client:prod
